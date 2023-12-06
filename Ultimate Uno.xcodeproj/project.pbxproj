@@ -17,6 +17,8 @@
 		DAE82E912B1F76FD00718664 /* Ultimate_UnoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE82E902B1F76FD00718664 /* Ultimate_UnoTests.swift */; };
 		DAE82E9B2B1F76FD00718664 /* Ultimate_UnoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE82E9A2B1F76FD00718664 /* Ultimate_UnoUITests.swift */; };
 		DAE82E9D2B1F76FD00718664 /* Ultimate_UnoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE82E9C2B1F76FD00718664 /* Ultimate_UnoUITestsLaunchTests.swift */; };
+		DAE82EAA2B1F786F00718664 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE82EA92B1F786F00718664 /* TableViewController.swift */; };
+		DAE82EAC2B1F788100718664 /* DeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE82EAB2B1F788100718664 /* DeckViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		DAE82E962B1F76FD00718664 /* Ultimate UnoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ultimate UnoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE82E9A2B1F76FD00718664 /* Ultimate_UnoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ultimate_UnoUITests.swift; sourceTree = "<group>"; };
 		DAE82E9C2B1F76FD00718664 /* Ultimate_UnoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ultimate_UnoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DAE82EA92B1F786F00718664 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		DAE82EAB2B1F788100718664 /* DeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				DAE82E762B1F76FB00718664 /* AppDelegate.swift */,
 				DAE82E782B1F76FB00718664 /* SceneDelegate.swift */,
 				DAE82E7A2B1F76FB00718664 /* ViewController.swift */,
+				DAE82EA92B1F786F00718664 /* TableViewController.swift */,
+				DAE82EAB2B1F788100718664 /* DeckViewController.swift */,
 				DAE82E7C2B1F76FB00718664 /* Main.storyboard */,
 				DAE82E822B1F76FD00718664 /* Assets.xcassets */,
 				DAE82E842B1F76FD00718664 /* LaunchScreen.storyboard */,
@@ -264,7 +270,9 @@
 				DAE82E7B2B1F76FB00718664 /* ViewController.swift in Sources */,
 				DAE82E772B1F76FB00718664 /* AppDelegate.swift in Sources */,
 				DAE82E792B1F76FB00718664 /* SceneDelegate.swift in Sources */,
+				DAE82EAA2B1F786F00718664 /* TableViewController.swift in Sources */,
 				DAE82E812B1F76FB00718664 /* Ultimate_Uno.xcdatamodeld in Sources */,
+				DAE82EAC2B1F788100718664 /* DeckViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

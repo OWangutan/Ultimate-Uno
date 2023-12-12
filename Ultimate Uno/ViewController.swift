@@ -20,6 +20,9 @@ public class delegate {
     static var playerNames = ["player 1","player 2","player 3","player 4"]
     static var playerDecks: [[card]] = [[],[],[],[]]
     static var currentplayer = ""
+    static var currentCard: card! = nil
+    static var drawDeck: [card] = []
+    static var discardDeck: [card] = []
     
 }
 class ViewController: UIViewController {

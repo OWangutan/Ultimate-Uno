@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DAAE7CE22B236D8200B55742 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE7CE12B236D8200B55742 /* CardCell.swift */; };
 		DAE82E772B1F76FB00718664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE82E762B1F76FB00718664 /* AppDelegate.swift */; };
 		DAE82E792B1F76FB00718664 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE82E782B1F76FB00718664 /* SceneDelegate.swift */; };
 		DAE82E7B2B1F76FB00718664 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE82E7A2B1F76FB00718664 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DAAE7CE12B236D8200B55742 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		DAE82E732B1F76FB00718664 /* Ultimate Uno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ultimate Uno.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE82E762B1F76FB00718664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE82E782B1F76FB00718664 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,13 +110,14 @@
 				DAE82E762B1F76FB00718664 /* AppDelegate.swift */,
 				DAE82E782B1F76FB00718664 /* SceneDelegate.swift */,
 				DAE82E7A2B1F76FB00718664 /* ViewController.swift */,
+				DAE82E7C2B1F76FB00718664 /* Main.storyboard */,
 				DAE82EA92B1F786F00718664 /* TableViewController.swift */,
 				DAE82EAB2B1F788100718664 /* DeckViewController.swift */,
-				DAE82E7C2B1F76FB00718664 /* Main.storyboard */,
 				DAE82E822B1F76FD00718664 /* Assets.xcassets */,
 				DAE82E842B1F76FD00718664 /* LaunchScreen.storyboard */,
 				DAE82E872B1F76FD00718664 /* Info.plist */,
 				DAE82E7F2B1F76FB00718664 /* Ultimate_Uno.xcdatamodeld */,
+				DAAE7CE12B236D8200B55742 /* CardCell.swift */,
 			);
 			path = "Ultimate Uno";
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAAE7CE22B236D8200B55742 /* CardCell.swift in Sources */,
 				DAE82E7B2B1F76FB00718664 /* ViewController.swift in Sources */,
 				DAE82E772B1F76FB00718664 /* AppDelegate.swift in Sources */,
 				DAE82E792B1F76FB00718664 /* SceneDelegate.swift in Sources */,

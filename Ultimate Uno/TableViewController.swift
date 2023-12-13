@@ -9,6 +9,7 @@ import UIKit
 
 class TableViewController: UIViewController {
     
+    
     @IBOutlet weak var cardLabelOutlet: UILabel!
     @IBOutlet weak var ImageViewOutlet: UIImageView!
     
@@ -19,8 +20,10 @@ class TableViewController: UIViewController {
         newGame()
         delegate.currentplayer = delegate.playerNames[0]
     }
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         loadCard()
+        
+        currentPlayerLabel.text = "Current Player: " + delegate.currentplayer + " (" + "\(delegate.playerDecks[delegate.playerNames.firstIndex(of: delegate.currentplayer)!].count)" + ")"
     }
 
     

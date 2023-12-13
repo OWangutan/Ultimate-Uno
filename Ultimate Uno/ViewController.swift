@@ -19,11 +19,11 @@ public class card{
 public class delegate {
     static var playerNames = ["player 1","player 2","player 3","player 4"]
     static var playerDecks: [[card]] = [[],[],[],[]]
-    static var currentplayer = ""
+    static var currentplayer = "player 1"
     static var currentCard: card! = nil
     static var drawDeck: [card] = []
     static var discardDeck: [card] = []
-    
+    static var forward = true
 }
 class ViewController: UIViewController {
 

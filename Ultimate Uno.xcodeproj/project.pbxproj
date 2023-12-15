@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DAAE7CE22B236D8200B55742 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE7CE12B236D8200B55742 /* CardCell.swift */; };
+		DAC6957C2B2CA339000FDA21 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6957B2B2CA339000FDA21 /* NameViewController.swift */; };
 		DAE82E772B1F76FB00718664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE82E762B1F76FB00718664 /* AppDelegate.swift */; };
 		DAE82E792B1F76FB00718664 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE82E782B1F76FB00718664 /* SceneDelegate.swift */; };
 		DAE82E7B2B1F76FB00718664 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE82E7A2B1F76FB00718664 /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		DAAE7CE12B236D8200B55742 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		DAC6957B2B2CA339000FDA21 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		DAE82E732B1F76FB00718664 /* Ultimate Uno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ultimate Uno.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE82E762B1F76FB00718664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE82E782B1F76FB00718664 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		DAE82E752B1F76FB00718664 /* Ultimate Uno */ = {
 			isa = PBXGroup;
 			children = (
+				DAC6957B2B2CA339000FDA21 /* NameViewController.swift */,
 				DAE82E762B1F76FB00718664 /* AppDelegate.swift */,
 				DAE82E782B1F76FB00718664 /* SceneDelegate.swift */,
 				DAE82E7A2B1F76FB00718664 /* ViewController.swift */,
@@ -273,6 +276,7 @@
 				DAAE7CE22B236D8200B55742 /* CardCell.swift in Sources */,
 				DAE82E7B2B1F76FB00718664 /* ViewController.swift in Sources */,
 				DAE82E772B1F76FB00718664 /* AppDelegate.swift in Sources */,
+				DAC6957C2B2CA339000FDA21 /* NameViewController.swift in Sources */,
 				DAE82E792B1F76FB00718664 /* SceneDelegate.swift in Sources */,
 				DAE82EAA2B1F786F00718664 /* TableViewController.swift in Sources */,
 				DAE82E812B1F76FB00718664 /* Ultimate_Uno.xcdatamodeld in Sources */,

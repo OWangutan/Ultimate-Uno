@@ -12,8 +12,13 @@ class DeckViewController: UIViewController, UICollectionViewDelegate, UICollecti
     let playerIndex = delegate.playerNames.firstIndex(of: delegate.currentplayer)!
     var selectedCard: card! = nil
     var selectedCardIndex = 0
+    var didselected = false
+    var selectedColor = UIColor.red
+    
+    @IBOutlet weak var colorButtonOutlet: UIButton!
     @IBOutlet weak var CollectionOutlet: UICollectionView!
     override func viewDidLoad() {
+        colorButtonOutlet.tintColor = UIColor.red
         super.viewDidLoad()
         CollectionOutlet.dataSource = self
         CollectionOutlet.delegate = self
@@ -35,10 +40,11 @@ class DeckViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedCard = delegate.playerDecks[delegate.playerNames.firstIndex(of: delegate.currentplayer)!][indexPath.row]
         selectedCardIndex = indexPath.row
+        didselected = true
     }
     @IBAction func playAction(_ sender: Any) {
-        if selectedCard.color == delegate.currentCard.color || selectedCard.type == delegate.currentCard.type ||
-            selectedCard.color == UIColor.darkGray{
+        if  didselected == true && (selectedCard.color == delegate.currentCard.color || selectedCard.type == delegate.currentCard.type ||
+            selectedCard.color == UIColor.darkGray)  {
             delegate.discardDeck.append(delegate.currentCard)
             if selectedCard.color == UIColor.darkGray{
                 selectedCard.color = UIColor.red
@@ -60,19 +66,54 @@ class DeckViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 if(delegate.forward == true){
                     if (playerIndex + 1 < 4){
                         delegate.playerDecks[playerIndex + 1].append(delegate.drawDeck.remove(at: 0))
+                        delegate.playerDecks[playerIndex + 1].append(delegate.drawDeck.remove(at: 0))
                     } else {
+                        delegate.playerDecks[0].append(delegate.drawDeck.remove(at: 0))
                         delegate.playerDecks[0].append(delegate.drawDeck.remove(at: 0))
                     }
                 } else {
                     if (playerIndex - 1 >= 0){
                         delegate.playerDecks[playerIndex - 1].append(delegate.drawDeck.remove(at: 0))
+                        delegate.playerDecks[playerIndex - 1].append(delegate.drawDeck.remove(at: 0))
                     } else {
+                        delegate.playerDecks[3].append(delegate.drawDeck.remove(at: 0))
                         delegate.playerDecks[3].append(delegate.drawDeck.remove(at: 0))
                     }
                 }
             }
-            
-            
+            if(selectedCard.type == "+4"){
+                if(delegate.forward == true){
+                    if (playerIndex + 1 < 4){
+                        delegate.playerDecks[playerIndex + 1].append(delegate.drawDeck.remove(at: 0))
+                        delegate.playerDecks[playerIndex + 1].append(delegate.drawDeck.remove(at: 0))
+                        delegate.playerDecks[playerIndex + 1].append(delegate.drawDeck.remove(at: 0))
+                        delegate.playerDecks[playerIndex + 1].append(delegate.drawDeck.remove(at: 0))
+                    } else {
+                        delegate.playerDecks[0].append(delegate.drawDeck.remove(at: 0))
+                        delegate.playerDecks[0].append(delegate.drawDeck.remove(at: 0))
+                        delegate.playerDecks[0].append(delegate.drawDeck.remove(at: 0))
+                        delegate.playerDecks[0].append(delegate.drawDeck.remove(at: 0))
+                    }
+                } else {
+                    if (playerIndex - 1 >= 0){
+                        delegate.playerDecks[playerIndex - 1].append(delegate.drawDeck.remove(at: 0))
+                        delegate.playerDecks[playerIndex - 1].append(delegate.drawDeck.remove(at: 0))
+                        delegate.playerDecks[playerIndex - 1].append(delegate.drawDeck.remove(at: 0))
+                        delegate.playerDecks[playerIndex - 1].append(delegate.drawDeck.remove(at: 0))
+                    } else {
+                        delegate.playerDecks[3].append(delegate.drawDeck.remove(at: 0))
+                        delegate.playerDecks[3].append(delegate.drawDeck.remove(at: 0))
+                        delegate.playerDecks[3].append(delegate.drawDeck.remove(at: 0))
+                        delegate.playerDecks[3].append(delegate.drawDeck.remove(at: 0))
+                    }
+                }
+            }
+            if(selectedCard.type == "+4" || selectedCard.type == "wild"){
+                selectedCard.color = selectedColor
+            }
+            if(delegate.playerDecks[playerIndex].count == 0){
+                delegate.currentCard.type = delegate.currentplayer + " IS THE WINNER"
+            }
             if(selectedCard.type == "skip"){
                 if(delegate.forward == true){
                     if (playerIndex + 2 == 4){
@@ -106,6 +147,10 @@ class DeckViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     }
                 }
             }
+            
+            
+        } else {
+            invaildCard()
         }
     }
     @IBAction func getCardAction(_ sender: Any) {
@@ -117,15 +162,33 @@ class DeckViewController: UIViewController, UICollectionViewDelegate, UICollecti
         CollectionOutlet.reloadData()
         
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func invaildCard() {
+        let alert = UIAlertController(title: "Invaild Card", message: "Please select vaild Card", preferredStyle: .actionSheet)
+          
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { _ in
+            //Cancel Action
+        }))
+        DispatchQueue.main.async {
+            self.present(alert, animated: false, completion: nil)
+        }
+          
     }
-    */
-
+    @IBAction func ColorAction(_ sender: Any) {
+        if(selectedColor == UIColor.red){
+            selectedColor = UIColor.blue
+            colorButtonOutlet.tintColor = UIColor.blue
+            
+        } else if (selectedColor == UIColor.blue){
+            selectedColor = UIColor.green
+            colorButtonOutlet.tintColor = UIColor.green
+        }else if (selectedColor == UIColor.green){
+            selectedColor = UIColor.yellow
+            colorButtonOutlet.tintColor = UIColor.yellow
+        } else {
+            selectedColor = UIColor.red
+            colorButtonOutlet.tintColor = UIColor.red
+        }
+    }
+    
+  
 }

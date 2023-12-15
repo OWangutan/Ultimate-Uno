@@ -15,6 +15,14 @@ class TableViewController: UIViewController {
     
     @IBOutlet weak var currentPlayerLabel: UILabel!
     
+    @IBOutlet weak var countCenter: UILabel!
+    @IBOutlet weak var playerCenter: UILabel!
+    
+    @IBOutlet weak var playerRight: UILabel!
+    @IBOutlet weak var countRight: UILabel!
+    
+    @IBOutlet weak var countLeft: UILabel!
+    @IBOutlet weak var PlayerLeft: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         newGame()
@@ -22,7 +30,7 @@ class TableViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         loadCard()
-        
+        rotatePlayers()
         currentPlayerLabel.text = "Current Player: " + delegate.currentplayer + " (" + "\(delegate.playerDecks[delegate.playerNames.firstIndex(of: delegate.currentplayer)!].count)" + ")"
     }
 
@@ -59,7 +67,12 @@ class TableViewController: UIViewController {
             delegate.playerDecks[i] = tempDeck
         }
         //setting the first Card
+        
         delegate.currentCard = delegate.drawDeck.remove(at: 0)
+        while delegate.currentCard.color == UIColor.darkGray{
+            delegate.discardDeck.append(delegate.currentCard)
+            delegate.currentCard = delegate.drawDeck.remove(at: 0)
+        }
         //loading new Card
         loadCard()
     }
@@ -68,5 +81,29 @@ class TableViewController: UIViewController {
             cardLabelOutlet.text = delegate.currentCard.type
             ImageViewOutlet.backgroundColor = delegate.currentCard.color
         }
+    }
+    func rotatePlayers(){
+        let index = delegate.playerNames.firstIndex(of: delegate.currentplayer)!
+        var rightIndex = index + 1
+        if rightIndex == 4 {
+            rightIndex = 0
+        }
+        var LeftIndex = index - 1
+        if LeftIndex == -1 {
+            LeftIndex = 3
+        }
+        var CenterIndex = index + 2
+        if (CenterIndex == 4){
+            CenterIndex = 0
+        } else if(CenterIndex == 5){
+            CenterIndex = 1
+        }
+       
+        PlayerLeft.text = delegate.playerNames[LeftIndex]
+        countLeft.text = "\(delegate.playerDecks[LeftIndex].count)"
+        playerRight.text = delegate.playerNames[rightIndex]
+        countRight.text = "\(delegate.playerDecks[rightIndex].count)"
+        playerCenter.text = delegate.playerNames[CenterIndex]
+        countCenter.text = "\(delegate.playerDecks[CenterIndex].count)"
     }
 }

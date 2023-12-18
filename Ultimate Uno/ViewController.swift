@@ -1,9 +1,31 @@
-//
-//  ViewController.swift
-//  Ultimate Uno
-//
-//  Created by BRIAN WANG on 12/5/23.
-//
+/*
+ Programming Concepts
+ 1. Variable and constants
+ 2. Operators
+ 3. if/else
+ 4. while loops/for loops
+ 5. switch Statments
+ 6. Arrays
+ 7. functions
+ 12. classes
+ 15. safely unwrapping
+ 23. Github
+ 25. Scrums and Sprints
+ 
+ 
+ UI Elements
+ 1. textfield
+ 2. button
+ 3. label
+ 8. stackview
+ 11. Collection view
+ 13. Navigation Controller
+ 14. View Controller
+ 15 Alert Contoller
+ 20. constraints
+ 
+ 
+ */
 
 import UIKit
 

@@ -188,8 +188,9 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AEg-AB-D9h">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AEg-AB-D9h">
                                 <rect key="frame" x="0.0" y="164" width="393" height="514"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KL0-0r-Dmb">
@@ -201,11 +202,9 @@
                                     <segue destination="kSk-B5-6Y4" kind="show" id="WOf-f4-Cbj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2N-v3-cnj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2N-v3-cnj">
                                 <rect key="frame" x="29" y="361" width="334" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="zQ2-Vb-yfB"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                 <nil key="highlightedColor"/>
@@ -217,12 +216,7 @@
                         <constraints>
                             <constraint firstItem="7pk-a8-MDP" firstAttribute="top" secondItem="cDv-lM-avX" secondAttribute="top" id="CRg-Qt-IHT"/>
                             <constraint firstItem="cDv-lM-avX" firstAttribute="trailing" secondItem="7pk-a8-MDP" secondAttribute="trailing" id="Kzf-kq-aM3"/>
-                            <constraint firstItem="g2N-v3-cnj" firstAttribute="centerX" secondItem="7pk-a8-MDP" secondAttribute="centerX" id="S9m-AH-3cp"/>
-                            <constraint firstItem="g2N-v3-cnj" firstAttribute="leading" secondItem="cDv-lM-avX" secondAttribute="leading" constant="29" id="eDu-OV-gqg"/>
                             <constraint firstItem="7pk-a8-MDP" firstAttribute="leading" secondItem="cDv-lM-avX" secondAttribute="leading" id="ej2-wx-UxQ"/>
-                            <constraint firstItem="g2N-v3-cnj" firstAttribute="centerY" secondItem="AEg-AB-D9h" secondAttribute="centerY" id="iTe-gU-gaB"/>
-                            <constraint firstItem="g2N-v3-cnj" firstAttribute="top" secondItem="ORz-e4-rAu" secondAttribute="top" constant="361" id="neq-go-Rmv"/>
-                            <constraint firstItem="g2N-v3-cnj" firstAttribute="centerX" secondItem="AEg-AB-D9h" secondAttribute="centerX" id="o2k-Ev-0w3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JfS-0s-Q1w"/>

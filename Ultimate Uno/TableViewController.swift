@@ -47,11 +47,13 @@ class TableViewController: UIViewController {
                 for t in 0..<types.count{
                     delegate.drawDeck.append(card(color: colors[c], type: types[t]))
                 }
-                if i == 0 {
-                    delegate.drawDeck.append(card(color: UIColor.darkGray, type: "wild"))
-                } else {
+                switch i {
+                case 0:
+                        delegate.drawDeck.append(card(color: UIColor.darkGray, type: "wild"))
+                    default:
                     delegate.drawDeck.append(card(color: UIColor.darkGray, type: "+4"))
                 }
+               
             }
         }
         //shuffleing the drawDeck
